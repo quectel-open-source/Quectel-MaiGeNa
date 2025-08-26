@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyParamsView</class>
+ <widget class="QWidget" name="MyParamsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>429</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quectel匠准色选AIBOX工具</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/file/Resources/quec.png</normaloff>:/file/Resources/quec.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border: 1px solid rgb(220, 220, 220);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item>
+    <widget class="QListView" name="scores_list"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="mean_threash_lb">
+       <property name="text">
+        <string>mean thresh:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="mean_threash_spin"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="save_one_btn">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="save_batch_btn">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resource/Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

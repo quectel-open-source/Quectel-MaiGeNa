@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditSolution</class>
+ <widget class="QWidget" name="EditSolution">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>902</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ROI模板绘制工具</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,0" columnstretch="5,3">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item row="0" column="1" rowspan="2">
+    <layout class="QVBoxLayout" name="rightPanel" stretch="0,0,1">
+     <property name="spacing">
+      <number>12</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="imageGroup">
+       <property name="title">
+        <string>图像操作</string>
+       </property>
+       <layout class="QVBoxLayout" name="imageLayout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="leftMargin">
+         <number>9</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>9</number>
+        </property>
+        <property name="bottomMargin">
+         <number>9</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="imageActionsLayout">
+          <item>
+           <widget class="QToolButton" name="captureBtn">
+            <property name="text">
+             <string>拍摄图像</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resource/Resources.qrc">
+              <normaloff>:/Resources/Resources/camera-2.png</normaloff>:/Resources/Resources/camera-2.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="openImageBtn">
+            <property name="text">
+             <string>打开图像</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resource/Resources.qrc">
+              <normaloff>:/Resources/Resources/open.png</normaloff>:/Resources/Resources/open.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="saveImageBtn">
+            <property name="text">
+             <string>保存图像</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resource/Resources.qrc">
+              <normaloff>:/Resources/Resources/save.png</normaloff>:/Resources/Resources/save.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="templateGroup">
+       <property name="title">
+        <string>方案</string>
+       </property>
+       <layout class="QVBoxLayout" name="imageLayout_3">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="leftMargin">
+         <number>9</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>9</number>
+        </property>
+        <property name="bottomMargin">
+         <number>9</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="templateSelectionLayout">
+          <item>
+           <widget class="QComboBox" name="templatesCombo">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="saveTemplateBtn">
+            <property name="text">
+             <string>保存</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resource/Resources.qrc">
+              <normaloff>:/Resources/Resources/save.png</normaloff>:/Resources/Resources/save.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="addTemplateBtn">
+            <property name="text">
+             <string>新增方案</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resource/Resources.qrc">
+              <normaloff>:/Resources/Resources/add.png</normaloff>:/Resources/Resources/add.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="delTemplateBtn">
+            <property name="text">
+             <string>删除方案</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resource/Resources.qrc">
+              <normaloff>:/Resources/Resources/delete.png</normaloff>:/Resources/Resources/delete.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="roiGroup">
+       <property name="title">
+        <string>ROI</string>
+       </property>
+       <layout class="QVBoxLayout" name="templateLayout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="leftMargin">
+         <number>9</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>9</number>
+        </property>
+        <property name="bottomMargin">
+         <number>9</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QToolButton" name="drawShapeBtn">
+            <property name="text">
+             <string>绘制ROI</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="shapesCombo"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::DashDotLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>标签</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>阈值</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>操作</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="statusLabel">
+     <property name="styleSheet">
+      <string notr="true">color: #606266; background-color: #f5f7fa; border-radius: 4px; padding: 4px;</string>
+     </property>
+     <property name="text">
+      <string>就绪</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="2">
+    <layout class="QVBoxLayout" name="leftPanel">
+     <item>
+      <widget class="ImageViewer" name="graphicsView"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageViewer</class>
+   <extends>QFrame</extends>
+   <header location="global">view/imageviewer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resource/Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

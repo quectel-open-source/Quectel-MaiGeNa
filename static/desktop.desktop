@@ -1,0 +1,10 @@
+[Desktop Entry]
+Comment=Quectel宏景PCBA板AI检测
+GenericName=Quectel宏景PCBA板AI检测
+Name=Quectel宏景PCBA板AI检测
+Exec=Quectel宏景PCBA板AI检测
+Icon=logo.png
+StartupNotify=false
+Terminal=true
+Type=Application
+Categories=Utility;
